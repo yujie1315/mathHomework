@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "mathHomework", "mathHomework\mathHomework.pyproj", "{BD1BED09-70E1-4C96-B9B0-8F0907B457E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD1BED09-70E1-4C96-B9B0-8F0907B457E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1BED09-70E1-4C96-B9B0-8F0907B457E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3420195C-E886-4461-A8CE-2E94DE719ECD}
+	EndGlobalSection
+EndGlobal
