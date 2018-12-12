@@ -22,6 +22,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="mathHomework.py" />
+    <Compile Include="Method\classGauss.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\Insert.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\Integrator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\Newton.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\NewtonInsert.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\Polynomial.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\RungeKutta4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Method\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Method\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
