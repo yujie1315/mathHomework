@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt #导入绘图函数
 
 if __name__ == "__main__":
 
-    '''
+    """
     print("------牛顿迭代法调用的例子-------")
     x = symbols("x") #定义符号变量x
     fx = x**4 - 1.4*x**3 - 0.48*x**2 + 1.048*x-0.512 #定义需要求解的方程
@@ -35,14 +35,14 @@ if __name__ == "__main__":
     
     g = ClassGauss(a,b)#初始化高斯列主元法
     g.Guass()#调用方法求解兴县方程组的解
-    '''
+   
     
     print("----牛顿法插值多项式求解的例子----")
     sr_x = np.linspace(0,3,6)
     sr_fx = [sin(i)+1 for i in sr_x] #构造sin(x)+1函数的插值点
     newtonInsert = NewtonInsert(sr_x,sr_fx)#初始化牛顿插值法
     fx = newtonInsert.get_Newton_inter()
-    tmp_x =  np.linspace(0,2,40)         #构造插值函数的绘图点
+    tmp_x =  np.linspace(-1,4,40)         #构造插值函数的绘图点
     tmp_y = [fx(i) for i in tmp_x] # 根据插值函数获得测试用例的纵坐标
     print("-----插值多项式的系数----")
     print(newtonInsert.a)#打印插值多项式的系数
@@ -55,23 +55,22 @@ if __name__ == "__main__":
     plt.plot(tmp_x, tmp_y, linestyle = '--', color='r')
     plt.show()
     
-    """
+    
     print("-------分段线性插值和分段二次插值的例子------")
     def f(x):#被插值函数表达式
         return sin(x)
-    myIns = Insert(f,[0,1],8)#构造插值误差计算实例
-    print("线性插值误差||f(x)-P1n||2为：")
-    print(myIns.LinearInsert())#调用线性插值误差计算，计算插值误差函数的2范数
-    print("线性插值误差||f(x)-P2n||2为：")
-    print(myIns.QuadraticInsert())#调用二次插值误差计算，计算插值误差函数的2范数
-    
+    for i in range(4):
+        print("等分区间数为%d时"%2**(i+1))
+        myIns = Insert(f,[0,1],2**(i+1))#构造插值误差计算实例
+        print("线性插值误差||f(x)-P1n||2为：")
+        print(myIns.LinearInsert())#调用线性插值误差计算，计算插值误差函数的2范数
+        print("线性插值误差||f(x)-P2n||2为：")
+        print(myIns.QuadraticInsert())#调用二次插值误差计算，计算插值误差函数的2范数
     
     print("----------通用多项式函数拟合-----------")
-    #s = 0.000000001
-    #x = [1-2*s,1-s,1,1+s,1+2*s]
-    #y = [1,2,3,4,5]
-    x = [-2,-1,0,1,2]
-    y = [4,1,0,1,4]
+    s = 0.000000001
+    x = [1-2*s,1-s,1,1+s,1+2*s]
+    y = [1,2,3,4,5]
     mypoly = Polynomial(x,y,3)
     print("构造的正交多项式为：")
     print(mypoly.showMultinomial())
@@ -95,7 +94,8 @@ if __name__ == "__main__":
         tmp_y[i] = fit(tmp_x[i])
     plt.plot(tmp_x, tmp_y, linestyle = '--', color='r')
     plt.show()
-
+    """
+    
     print("-------Runge-Kutta4阶算法例子------")
     #-----@brief:  微分方程描述函数
     #-----@return  返回值为微分方程
@@ -127,4 +127,4 @@ if __name__ == "__main__":
     plt.plot(rk_x,abs(error), linestyle = '-', marker='', color='r')
     plt.title("error")
     plt.show()
-    """
+    
