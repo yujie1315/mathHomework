@@ -16,7 +16,6 @@ class RungeKutta4(object):
         self.x  = np.linspace(x[0],x[1],n+1)#构造横坐标序列
         self.y  = np.zeros(len(self.x))#申请存错解的内存
         self.y[0] = y0#赋值解初值
-        print(self.x)
     '''
     @brief:  实现Runge-Kutta 算法,为算法类内部函数，不建议外部直接调用
     '''
@@ -33,5 +32,4 @@ class RungeKutta4(object):
     '''
     def get_result(self):
         self.cal()
-        print(self.y)
         return self.x,self.y

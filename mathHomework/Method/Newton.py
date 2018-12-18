@@ -40,10 +40,10 @@ class Newton(object):
             stepCount += 1
             if self.debug:
                 print("迭代次数为：%d,本次迭代解为%f,前一次迭代解为%f"%(stepCount,x1,self.x0))
+            if abs(x1-self.x0)<self.__ret:
+                return [x1,self.__ret]#返回求解方程的根和方程求解精度
             if x1<self.xmin:
                 x1 = self.xmin
             if x1 > self.xmax:
                 x1 = self.xmax
-            if abs(x1-self.x0)<self.__ret:
-                return [x1,self.__ret]#返回求解方程的根和方程求解精度
             self.x0 = x1
